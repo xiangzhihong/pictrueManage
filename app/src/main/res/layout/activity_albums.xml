@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/c12"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/cancel_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="13dp"
+            android:textColor="@color/c6"
+            android:text="取消" />
+
+        <TextView
+            android:id="@+id/select_album_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:clickable="true"
+            android:drawablePadding="6dp"
+            android:drawableRight="@drawable/expanded_arrow"
+            android:gravity="center"
+            android:maxWidth="300dp"
+            android:singleLine="true"
+            android:text="相机胶卷"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/take_photo_iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:padding="13dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_take_pic" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="#d7d7d7" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <GridView
+            android:id="@+id/album_girds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:horizontalSpacing="8dp"
+            android:listSelector="#00000000"
+            android:numColumns="4"
+            android:scrollbars="none"
+            android:scrollingCache="false"
+            android:verticalSpacing="8dp" />
+
+
+        <ListView
+            android:id="@+id/album_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/c4"
+            android:dividerHeight="1px"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View style="@style/horizontal_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/c2">
+
+        <TextView
+            android:id="@+id/albun_ok"
+            style="@style/style_18_c9"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="确定" />
+    </RelativeLayout>
+
+</LinearLayout>

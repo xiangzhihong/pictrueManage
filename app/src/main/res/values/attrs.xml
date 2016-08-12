@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!---MD风格的Loading-->
+    <declare-styleable name="ProgressWheel">
+        <attr name="matProg_progressIndeterminate" format="boolean" />
+        <attr name="matProg_barColor" format="color" />
+        <attr name="matProg_rimColor" format="color" />
+        <attr name="matProg_rimWidth" format="dimension" />
+        <attr name="matProg_spinSpeed" format="float" />
+        <attr name="matProg_barSpinCycleTime" format="integer" />
+        <attr name="matProg_circleRadius" format="dimension" />
+        <attr name="matProg_fillRadius" format="boolean" />
+        <attr name="matProg_barWidth" format="dimension" />
+        <attr name="matProg_linearProgress" format="boolean" />
+    </declare-styleable>
+
+    <!-- 需要异步加载数据的根Layout-->
+    <declare-styleable name="UIBaseLoadingLayout">
+        <attr name="ymtEmptyView" format="reference" />
+        <attr name="ymtLoadingView" format="reference" />
+        <attr name="ymtRetryView" format="reference" />
+        <attr name="ymtContentView" format="reference" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,121 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/album_surfaceview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:background="#000000"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:layout_marginLeft="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/back_icon" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_alignParentBottom="true"
+            android:background="#000000"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/camera_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/flash_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/flash_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:padding="10dp"
+                        android:src="@drawable/camera_flash_off" />
+
+                    <TextView
+                        android:id="@+id/flash_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/flash_iv"
+                        android:clickable="true"
+                        android:text="关闭"
+                        android:textColor="@color/c12"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/change_iv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/camera_flip" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/take_photo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerInside"
+                android:src="@drawable/camera_trigger" />
+        </LinearLayout>
+
+
+        <com.xzh.picturesmanager.album.view.ProgressWheel
+            android:id="@+id/pb_web_loading"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            app:matProg_barColor="@color/c1"
+            app:matProg_fillRadius="true"
+            app:matProg_progressIndeterminate="true" />
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

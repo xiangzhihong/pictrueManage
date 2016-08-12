@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageButton
+            android:id="@+id/back"
+            style="@style/TitleButton" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/horizontal_line"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <TextView
+            style="@style/OperationTextStyle"
+            android:text="商品照片" />
+
+        <TextView
+            style="@style/OperationTipTextStyle"
+            android:text="最少1张，最多12张" />
+
+        <TextView
+            android:id="@+id/pic_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:text="0/12"
+            android:textColor="@color/c5"
+            android:textSize="@dimen/text_size_f14" />
+
+    </LinearLayout>
+
+
+    <com.xzh.picturesmanager.view.FixedGridView
+        android:id="@+id/pictures"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/c12"
+        android:horizontalSpacing="15dp"
+        android:numColumns="3"
+        android:padding="10dp"
+        android:verticalSpacing="15dp" />
+
+
+</LinearLayout>

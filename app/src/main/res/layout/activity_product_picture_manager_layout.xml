@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c7"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:id="@+id/action_bar_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:layout_alignParentTop="true">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            style="@style/TitleButton" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="管理图片"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_large" />
+
+        <TextView
+            android:id="@+id/confirm_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_8"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="提交"
+            android:textColor="@color/c9_c5_color_selector"
+            android:textSize="@dimen/text_size_f13" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_below="@+id/action_bar_view">
+
+        <com.xzh.picturesmanager.view.photoview.PhotoViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/c17" />
+
+        <TextView
+            android:id="@+id/indicator_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:background="@drawable/c9_2circle_rectangle_shap"
+            android:gravity="center"
+            android:paddingBottom="1dp"
+            android:paddingLeft="@dimen/dimen_10"
+            android:paddingRight="@dimen/dimen_10"
+            android:paddingTop="1dp"
+            android:text="0/0"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_f12" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="@dimen/dimen_15"
+        android:paddingTop="@dimen/dimen_10"
+        android:paddingLeft="@dimen/dimen_8"
+        android:paddingRight="@dimen/dimen_8"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="按住小图拖动可调整顺序"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_f13" />
+
+        <com.xzh.picturesmanager.view.DragGridView
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:horizontalSpacing="@dimen/dimen_10"
+            android:listSelector="#00ffffff"
+            android:numColumns="6"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="@dimen/dimen_10" />
+    </LinearLayout>
+</RelativeLayout>
